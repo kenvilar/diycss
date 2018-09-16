@@ -31,6 +31,7 @@ button {
 	background: #1d4698;
 	border-color: #1d4698;
 }
+
 /* FB Style Light */
 .fb-style-light {
 	background: #f6f7f9;
@@ -105,6 +106,7 @@ button {
 	border: solid 3px transparent;
 	border-top: solid 3px hsl(16, 100%, 30%);
 }
+
 /* 3D Style One */
 .btn-3d-two {
 	position: relative;
@@ -178,6 +180,8 @@ button {
 	background-image: linear-gradient(to top right, orangered, yellow);
 	color: #fff;
 }
+
+/* Gradient Button One */
 .gradient-button-two {
 	position: relative;
 	z-index: 1;
@@ -202,4 +206,70 @@ button {
 	background-image: linear-gradient(to right, orangered, transparent);
 	color: #fff;
 	border-right-style: none;
+}
+
+/* Animated Button One */
+.animated-button-one {
+	position: relative;
+	display: inline-block;
+	padding: 20px 40px;
+	font-size: 1.4rem;
+	background-color: #00b3b4;
+	background-image: url("pattern.png");
+	background-size: 40px 40px;
+	border: 1px solid #555;
+	color: #fff;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.animated-button-one:hover {
+	animation: kenvilar-loading-btn-animation 2s linear infinite;
+}
+
+@keyframes kenvilar-loading-btn-animation {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 40px 0;
+	}
+}
+
+/* Animated Button Two */
+.animated-button-two {
+	position: relative;
+	display: inline-block;
+	padding: 20px 40px;
+	font-size: 1.4rem;
+	background-color: #00b3b4;
+	background-size: 40px 40px;
+	border: 1px solid #555;
+	color: #fff;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.animated-button-two:after {
+	position: absolute;
+	top: 30%;
+	right: 0.6em;
+	content: "»";
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	opacity: 0;
+}
+.animated-button-two:hover {
+	padding: 20px 60px 20px 20px;
+}
+.animated-button-two:hover::after {
+	right: 1.2em;
+	opacity: 1;
 }
